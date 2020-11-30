@@ -1,1 +1,1 @@
-# java-dynawo-docker
+# java-dynawo docker image
