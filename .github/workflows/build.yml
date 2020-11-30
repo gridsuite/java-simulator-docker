@@ -1,0 +1,26 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build-and-deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        with:
+          persist-credentials: false
+
+      - name: Build and publish Docker image
+        if: github.ref == 'refs/heads/master'
+        uses: elgohr/Publish-Docker-Github-Action@master
+        env:
+          DYNAWO_VERSION: 1.2.0
+        with:
+          name: gridsuite/java-dynawo
+          username: gridsuiteci
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          buildargs: DYNAWO_VERSION
+          tags: "latest"
