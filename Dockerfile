@@ -10,5 +10,9 @@ RUN wget https://github.com/dynawo/dynawo/releases/download/v${DYNAWO_VERSION}/D
   unzip Dynawo_Linux_v${DYNAWO_VERSION}.zip && \
   rm -f Dynawo_Linux_v${DYNAWO_VERSION}.zip
 
+RUN wget https://github.com/dynawo/dynaflow-launcher/releases/download/v${DYNAWO_VERSION}/DynaFlowLauncher_Linux_v${DYNAWO_VERSION}.zip && \
+  unzip DynaFlowLauncher_Linux_v${DYNAWO_VERSION}.zip && \
+  rm -f DynaFlowLauncher_Linux_v${DYNAWO_VERSION}.zip
+
 WORKDIR /home/powsybl
 USER powsybl
