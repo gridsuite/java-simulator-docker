@@ -23,4 +23,4 @@ jobs:
           username: gridsuiteci
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           buildargs: DYNAWO_VERSION,HADES2_FAMILY_VERSION,HADES2_VERSION
-          tags: "latest"
+          tags: "1.0.0"
