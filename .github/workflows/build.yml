@@ -15,7 +15,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: elgohr/Publish-Docker-Github-Action@33a481be3e179353cb7793a92b57cf9a6c985860 # v4
         env:
-          DYNAWO_VERSION: 1.4.0
+          DYNAWO_VERSION: 1.5.0
           HADES2_FAMILY_VERSION: 6.7.1
           HADES2_VERSION: 6.7.1.1
         with:
@@ -23,4 +23,4 @@ jobs:
           username: gridsuiteci
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           buildargs: DYNAWO_VERSION,HADES2_FAMILY_VERSION,HADES2_VERSION
-          tags: "2.0.0"
+          tags: "2.1.0"
