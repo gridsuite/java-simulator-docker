@@ -16,8 +16,8 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@33a481be3e179353cb7793a92b57cf9a6c985860 # v4
         env:
           DYNAWO_VERSION: 1.4.0
-          HADES2_FAMILY_VERSION: 6.7.1
-          HADES2_VERSION: 6.7.1.1
+          HADES2_FAMILY_VERSION: 6.9.0
+          HADES2_VERSION: 6.9.0.2
         with:
           name: gridsuite/java-simulator
           username: gridsuiteci
